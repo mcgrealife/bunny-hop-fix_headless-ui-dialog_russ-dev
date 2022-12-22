@@ -40,46 +40,44 @@ function App() {
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as="div"
-            className="relative z-50 font-sfp-text"
+            className="relative z-50 font-sfp-text flex lg:items-center justify-center lg:px-4 text-center overflow-y-hidden"
             onClose={closeModal}
           >
-            <div className="fixed h-screen inset-0 flex lg:items-center justify-center lg:px-4 text-center overflow-y-hidden">
-              <Transition.Child
-                as={Fragment}
-                enter={"ease-out duration-1000"}
-                enterFrom={"translate-y-full"}
-                enterTo={"translate-y-0"}
-                leave={"ease-in duration-150"}
-                leaveFrom={"translate-y-0"}
-                leaveTo={"translate-y-full"}
-              >
-                <Dialog.Panel className="mt-auto w-full lg:max-w-2xl transform overflow-hidden rounded-t-2xl lg:rounded-2xl bg-white text-left align-middle shadow-down-l transition-all">
-                  <Dialog.Title
-                    as="div"
-                    className="relative px-2 py-3.5 flex items-center justify-center"
-                  >
-                    <span className="text-xl tracking-[.01em] font-bold font-sfp-display text-center text-neutral-800">
-                      Change cover
-                    </span>
-                  </Dialog.Title>
-                  <hr />
-                  <div className="grid gap-y-4 grid-cols-1 lg:grid-cols-2 p-6 lg:divide-x divide-neutral-300">
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
-                    <p>hehe</p>
+            <Transition.Child
+              as={Fragment}
+              enter={"ease-out duration-1000"}
+              enterFrom={"translate-y-full"}
+              enterTo={"translate-y-0"}
+              leave={"ease-in duration-150"}
+              leaveFrom={"translate-y-0"}
+              leaveTo={"translate-y-full"}
+            >
+              <Dialog.Panel className="fixed bottom-0 mt-auto w-full lg:max-w-2xl transform overflow-hidden rounded-t-2xl lg:rounded-2xl bg-white text-left align-middle shadow-down-l transition-all ">
+                <Dialog.Title
+                  as="div"
+                  className="relative px-2 py-3.5 flex items-center justify-center"
+                >
+                  <span className="text-xl tracking-[.01em] font-bold font-sfp-display text-center text-neutral-800">
+                    Change cover
+                  </span>
+                </Dialog.Title>
+                <hr />
+                <div className="grid gap-y-4 grid-cols-1 lg:grid-cols-2 p-6 lg:divide-x divide-neutral-300">
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
+                  <p>hehe</p>
 
-                    {/* bunny hop activated, comment these button to see smooth animation */}
-                    <button>Save</button>
-                    <button>Cancel</button>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
+                  {/* bunny hop activated, comment these button to see smooth animation */}
+                  <button>Save</button>
+                  <button>Cancel</button>
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
           </Dialog>
         </Transition>
       </div>
